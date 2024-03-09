@@ -19,7 +19,23 @@
 ; An S-expression is either an atom, or a CONS cell whose CAR and CDR parts are S-expressions.
 
 ; What is a CONS cell?
+; The CONS function creates cons cells. It takes two inputs and returns a
+; pointer to a new cons cell whose CAR points to the first input and whose
+; CDR points to the second. The term “CONS” is short for CONStruct.
+;
+; A --------> |~~~~|
+;             |CONS|-----> (A B C D)
+; (B C D) --> |____|
+;
+;|~~|~~|----(B C D)   The HELLO atom is CONSed to a list (B C D) which itself can be represented by CONS cells.
+;|__|__|              The new CONS pair is created above. The final pointer to CAR of new CONS is the result of CONS.
+;  |
+;  |
+; HELLO
+
 
 ; What is CAR?
+; First half of the CONS cell (the left half).  
 
 ; What is CDR?
+; Second half of the CONS cell (the right half). Pronounced 'could-er'.
